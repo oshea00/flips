@@ -62,6 +62,11 @@ double f(int flips, int *headsInARow, int *hist)
 			currentRun = 0;
 		}
 	}	
+	if (currentRun)
+	{
+		*headsInARow = (*headsInARow < currentRun) ? currentRun : *headsInARow;
+		hist[currentRun]++;
+	}
 
 	return heads / (double) flips;
 }

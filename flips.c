@@ -6,7 +6,7 @@
 
 double f(int, int *i, int *hist);
 
-int main(int argc, char** argv )
+int main(int argc, char* argv[] )
 {
 	int hist[1000];
 	time_t timer;
@@ -40,7 +40,7 @@ int main(int argc, char** argv )
 	return 0;
 }
 
-double f(int flips, int *headsInARow, int *hist)
+double f(int flips, int *headsInARow, int hist[])
 {
 	int heads = 0;
 	int currentRun = 0;
